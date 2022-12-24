@@ -5,9 +5,9 @@ alpha_lower="abcdefghijklmnopqrstuvwxyz"
 
 alpha_upper="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-numbers="1234567890"
+numbers="123456789012345678901234567890"
 
-symbols="!@#$%^&*-_+"
+symbols="!@#$%^&*-_+!@#$%^&*-_+!@#$%^&*-_+"
 
 length=16
 
