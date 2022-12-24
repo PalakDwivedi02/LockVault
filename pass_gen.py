@@ -7,7 +7,7 @@ alpha_upper="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 numbers="1234567890"
 
-symbols="!@#$%^&*-_"
+symbols="!@#$%^&*-_+"
 
 length=16
 
