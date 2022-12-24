@@ -16,9 +16,9 @@ str=alpha_lower+numbers+alpha_upper+symbols
 ch="".join(random.sample(str,length))
 
 print(ch)
-f=open("Names.txt","a")
+f=open("Names.csv","a")
 f.write("\n"+ch)
 #f.truncate(0)
 f.close()
-f=open("Names.txt","r")
+f=open("Names.csv","r")
 print(f.read())
