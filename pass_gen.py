@@ -10,12 +10,12 @@ symbols = "!@#$%^&*-_+!@#$%^&*-_+!@#$%^&*-_+"
 length = 16
 
 def generate_password():
-    with open("pws.csv", "a") as file:
-        str = alpha_lower+numbers+alpha_upper+symbols
-        ch = "".join(random.sample(str, length))
-        file.write("\n"+ch)
-        # f.truncate(0)
-        return ch
+    #with open("pws.csv", "a") as file:
+    str = alpha_lower+numbers+alpha_upper+symbols
+    ch = "".join(random.sample(str, length))
+    #file.write("\n"+ch)
+    # f.truncate(0)
+    return ch
 
 def read_password(site):
     with open("pws.csv", "r") as file:
@@ -31,7 +31,7 @@ def write_password(site, password):
     with open("pws.csv", "a") as file:
         file.write(f"\n{site},{password}")
 
-def delete_password(site):
+def delete_password(site): #not working (WIP)
     with open("pws.csv", "r") as file:
         reader = csv.DictReader(file)
         for row in reader:
@@ -92,11 +92,12 @@ write_password("instagram", generate_password())
 write_password("twitter", generate_password())
 write_password("youtube", generate_password())
 write_password("github", generate_password())
-read_password("goggle")
+gog = read_password("goggle")
+print(f"Goggle Password: {gog}")
 read_password("facebook")
 read_password("insta")
-delete_password("goggle")
-delete_password("facebook")
+delete_password("goggle") #not working
+delete_password("facebook") #not working
 
 # def rp():
 #     f = open("Names.csv", "r")
