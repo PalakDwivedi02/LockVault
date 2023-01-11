@@ -76,6 +76,41 @@ def clean_csv():
 #             name = row[0]
 #             names[name] += 1
 
+#menu drven program
+while (True):
+    print("\nMAIN MENU")
+    print("Enter your choice")
+    print("1.Generate Password\n2.Read Password\n3.Write Password\n4.Delete Password\n5.Update Password\n6.Clean File\n7.Exit")
+    ch=int(input())
+    if(ch==1):
+        generate_password()
+        break
+    elif(ch==2):
+        s=str(input("Enter the site for which password is to be set"))
+        read_password(s)
+        break
+    elif(ch==3):
+        s=str(input("Enter the site for which password is to be set"))
+        p= generate_password()
+        write_password(s,p)
+        break
+    elif(ch==4):
+        s=str(input("Enter the site for which password is to be set"))
+        delete_password(s)
+        break
+    elif(ch==5):
+        s=str(input("Enter the site for which password is to be set"))
+        p=generate_password()
+        update_password(s,p)
+        break
+    elif(ch==6):
+        clean_csv()
+        break
+    elif(ch==7):
+        break
+    else:
+        print("Enter a valid choice")
+        break
 
 #content to be deleted after testing
 fd = read_password("alergia")
