@@ -79,60 +79,30 @@ def clean_csv():
 #menu drven program
 while (True):
     print("\nMAIN MENU")
-    print("Enter your choice")
-    print("1.Generate Password\n2.Read Password\n3.Write Password\n4.Delete Password\n5.Update Password\n6.Clean File\n7.Exit")
-    ch=int(input())
+    print()
+    print("1.Read Password\n2.Write Password\n3.Delete Password\n4.Update Password\n5.Clean File\n6.Exit")
+    ch=int(input("\nChoice: "))
     if(ch==1):
-        generate_password()
-        break
+        s=str(input("Enter the site: "))
+        print(read_password(s))
     elif(ch==2):
-        s=str(input("Enter the site for which password is to be set"))
-        read_password(s)
-        break
-    elif(ch==3):
-        s=str(input("Enter the site for which password is to be set"))
+        s=str(input("Enter the site: "))
         p= generate_password()
         write_password(s,p)
-        break
-    elif(ch==4):
-        s=str(input("Enter the site for which password is to be set"))
+    elif(ch==3):
+        s=str(input("Enter the site: "))
         delete_password(s)
-        break
-    elif(ch==5):
-        s=str(input("Enter the site for which password is to be set"))
+    elif(ch==4):
+        s=str(input("Enter the site: "))
         p=generate_password()
         update_password(s,p)
-        break
-    elif(ch==6):
+    elif(ch==5):
         clean_csv()
-        break
-    elif(ch==7):
+    elif(ch==6):
         break
     else:
         print("Enter a valid choice")
         break
-
-#content to be deleted after testing
-fd = read_password("alergia")
-print(f"Found Password: {fd}") #lines to be used for user choice function
-
-print(f"Generated Password: {generate_password()}")
-write_password("alergia", "1234567890")
-update_password("alergia", "12345590")
-delete_password("alergia")
-clean_csv()
-write_password("goggle", generate_password())
-write_password("facebook", generate_password())
-write_password("instagram", generate_password())
-write_password("twitter", generate_password())
-write_password("youtube", generate_password())
-write_password("github", generate_password())
-gog = read_password("goggle")
-print(f"Goggle Password: {gog}")
-read_password("facebook")
-read_password("insta")
-delete_password("goggle") #not working
-delete_password("facebook") #not working
 
 # def rp():
 #     f = open("Names.csv", "r")
